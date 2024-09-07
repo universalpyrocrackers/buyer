@@ -211,7 +211,7 @@ var originalText = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
         // console.log(data)
         // console.log("*****")
         if(data.length!=0)
-        var t={name:data[0].details[0],pdf:data[0].pdf,contact:data[0].details[1],payment:data[0].details[2],deliverycharge:data[0].deliverycharge,minbuyprice:data[0].minbuyprice}
+        var t={name:data[0].details[0],gpay:data[0].gpay,pdf:data[0].pdf,contact:data[0].details[1],payment:data[0].details[2],deliverycharge:data[0].deliverycharge,minbuyprice:data[0].minbuyprice}
       // console.log(t);
         var ciphertext = CryptoJS.AES.encrypt(JSON.stringify(t), process.env.enckey).toString();
          res.send({"text":ciphertext})
