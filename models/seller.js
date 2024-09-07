@@ -24,6 +24,9 @@ const sellerSchema=mongoose.Schema({
     },minbuyprice:{
         type:Number
 
+    },gpay:{
+        type:String,
+        required:true
     }
 
 });
